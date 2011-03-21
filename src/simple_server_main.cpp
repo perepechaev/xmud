@@ -66,26 +66,6 @@ void echos(ServerSocket* socket, const char* message){
     *socket << message;
 }
 
-//char* toCP1251(const char* from, char** to){
-//    iconv_t cd;
-//    printf("FROM: %s\n", from);
-//    size_t str_len = strlen(from), out_len;
-////    cd = iconv_open("UTF-8", "CP1251");
-//    cd = iconv_open("KOI8-R", "CP1251");
-//
-//    char *out;
-//    *out = NULL;
-
-//    printf("TO: %p\n", out);
-//    iconv(cd, &from, &str_len, &out, &out_len);
-//    printf("TO: %s\n", out);
-//    printf("LEN: %d\n", out_len);
-//    printf("LEN2: %d\n", str_len);conv
-//    printf("FROM: %s\n", from);
-//    iconv_close(cd);
-//    return *to;
-//}
-
 void echos(ServerSocket* socket, std::string message){
     *socket << message;
 }
